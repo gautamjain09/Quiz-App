@@ -13,19 +13,19 @@ public class MainActivity extends AppCompatActivity
     private String [] questions = {"C++ is a prerson","C++ was introduced in 1233", "C++ was created using python"
             , "C++ has abstract classes","C++ supports interface?"};
 
-    private boolean [] answers = {false,false,false,true,true};
+    private boolean [] answers = {false, false, false, true, true};
     private int score = 0;
     Button yes;
     Button no;
     private int i = 0;
     TextView question;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         yes = findViewById(R.id.yes);
         no = findViewById(R.id.no);
         question = findViewById(R.id.question);
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity
                         score++;
                     }
                     i++;
+
                     if (i <= questions.length - 1)
                     {
                         question.setText(questions[i]);
@@ -71,7 +72,8 @@ public class MainActivity extends AppCompatActivity
                         score++;
                     }
                     i++;
-                    if(i<=questions.length -1)
+
+                    if(i<=questions.length - 1)
                     {
                         question.setText(questions[i]);
                     }
